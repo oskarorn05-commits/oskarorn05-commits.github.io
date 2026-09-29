@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mælaborð</title>
+  <meta name="description" content="Mælaborð is a private, personal dashboard that runs only on its owner's own computer.">
+  <style>
+    :root { color-scheme: dark; }
+    body { margin: 0; background: #111110; color: #e8e6e1; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 680px; margin: 0 auto; padding: 56px 16px 72px; }
+    h1 { font-size: 2rem; margin: 0 0 4px; letter-spacing: -0.02em; }
+    h2 { font-size: 1.1rem; margin: 36px 0 8px; }
+    .lead { color: #a8a59d; margin: 0 0 28px; }
+    ul { padding-left: 20px; }
+    li { margin: 4px 0; }
+    a { color: #6aa6f0; }
+    .card { background: #1a1a19; border: 1px solid #2c2b29; border-radius: 16px; padding: 4px 20px 16px; margin-top: 28px; }
+    footer { margin-top: 48px; color: #8a877f; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Mælaborð</h1>
+    <p class="lead">A private, personal dashboard. <span lang="is">Persónulegt mælaborð.</span></p>
+
+    <p>
+      Mælaborð is a personal dashboard that runs only on its owner's own computer. It brings study,
+      training, nutrition, personal finances, calendar and health data together in one place, so the
+      owner can follow their own goals.
+    </p>
+
+    <div class="card">
+      <h2>How it uses Google data</h2>
+      <p>With the owner's permission, Mælaborð reads (read-only):</p>
+      <ul>
+        <li>sleep, activity and health measurements from the <b>Google Health API</b> (Fitbit), and</li>
+        <li>events from <b>Google Calendar</b>,</li>
+      </ul>
+      <p>
+        and shows them as charts and summaries on the owner's computer. The data is stored only on that
+        computer. It is never shared, sold or sent anywhere else.
+      </p>
+    </div>
+
+    <h2>Not a public service</h2>
+    <p>
+      Mælaborð has one user, its owner. It has no sign-up and cannot be reached from the internet; it
+      runs at <code>localhost</code> on the owner's own machine.
+    </p>
+
+    <p><a href="privacy.html">Privacy policy</a></p>
+
+    <footer>Mælaborð · personal project</footer>
+  </main>
+</body>
+</html>
