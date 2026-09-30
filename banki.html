@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="is">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Mælaborð: aftur úr bankanum</title>
+  <style>
+    :root { color-scheme: dark; }
+    body { margin: 0; background: #111110; color: #e8e6e1; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 520px; margin: 0 auto; padding: 80px 16px; text-align: center; }
+    a { color: #6aa6f0; }
+    p { color: #a8a59d; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Sendi þig aftur í Mælaborð…</h1>
+    <p>Bankinn krefst https-slóðar, svo innskráningin fer í gegnum þessa síðu og beint áfram á tölvuna þína (localhost). Ekkert er vistað hér.</p>
+    <p><a id="link" href="http://localhost:3000/utgjold">Smelltu hér ef ekkert gerist</a></p>
+  </main>
+  <script>
+    // Portið kemur fremst í `state` (t.d. "3000-ab12…") svo bæði aðalsíðan og þróunarútgáfan virki
+    var params = new URLSearchParams(location.search);
+    var port = (params.get("state") || "").split("-")[0];
+    if (!/^\d{2,5}$/.test(port)) port = "3000";
+    var target = "http://localhost:" + port + "/api/banki/callback" + location.search;
+    document.getElementById("link").href = target;
+    location.replace(target);
+  </script>
+</body>
+</html>
